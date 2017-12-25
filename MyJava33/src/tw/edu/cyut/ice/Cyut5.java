@@ -1,9 +1,11 @@
 package tw.edu.cyut.ice;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 public class Cyut5 extends JFrame {
@@ -19,9 +21,10 @@ public class Cyut5 extends JFrame {
 		area = new JTextArea();
 		
 		setLayout(new BorderLayout());
-		add(b1, BorderLayout.NORTH);
-		add(b2, BorderLayout.NORTH);
-		add(b3, BorderLayout.NORTH);
+		JPanel top = new JPanel(new FlowLayout());
+		top.add(b1); top.add(b2);top.add(b3);
+		
+		add(top, BorderLayout.NORTH);
 		add(area, BorderLayout.CENTER);
 		
 		setVisible(true);
