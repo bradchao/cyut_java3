@@ -19,6 +19,13 @@ public class TWId {
 		for (int i=0; i<7; i++) {
 			id += (int)(Math.random()*10);
 		}
+		
+		for (int i=0; i<10; i++) {
+			if (isRightTWId(id + i)) {
+				id += i;
+				break;
+			}
+		}
 	}
 	
 	private TWId(String id) {
