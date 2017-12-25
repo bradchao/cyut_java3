@@ -2,13 +2,15 @@ package tw.edu.cyut.ice;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-public class Cyut5 extends JFrame {
+public class Cyut5 extends JFrame implements ActionListener {
 	private JButton b1, b2, b3;
 	private JTextArea area;
 	
@@ -27,12 +29,19 @@ public class Cyut5 extends JFrame {
 		add(top, BorderLayout.NORTH);
 		add(area, BorderLayout.CENTER);
 		
+		b1.addActionListener(this);
+		
+		
 		setVisible(true);
 		setSize(640, 480);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	public static void main(String[] args) {
 		new Cyut5();
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		System.out.println("OK");
 	}
 
 }
