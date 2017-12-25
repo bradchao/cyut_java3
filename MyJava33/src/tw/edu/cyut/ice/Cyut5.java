@@ -30,7 +30,8 @@ public class Cyut5 extends JFrame implements ActionListener {
 		add(area, BorderLayout.CENTER);
 		
 		b1.addActionListener(this);
-		
+		b2.addActionListener(this);
+		b3.addActionListener(this);
 		
 		setVisible(true);
 		setSize(640, 480);
@@ -41,7 +42,13 @@ public class Cyut5 extends JFrame implements ActionListener {
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("OK");
+		if (e.getSource() == b1) {
+			System.out.println("b1");
+		}else if (e.getSource() == b2) {
+			System.out.println("b2");
+		}else if (e.getSource() == b3) {
+			System.out.println("b3");
+		}
 	}
 
 }
